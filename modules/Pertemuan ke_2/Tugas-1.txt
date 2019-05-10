@@ -1,0 +1,13 @@
+Buatlah agar segitiga menjadi segitiga siku-siku dan terletak pada posisi 
+
+1. Kiri atas, 
+2. Kanan atas, 
+3. Kiri bawah, 
+4. Kanan bawah, dan 
+5. Tepat di tengah, 
+
+Dengan mengubah parameter pada fungsi glVertex3f(x, y, z).
+Setting nama window sesuai nama kelompoknya glutCreateWindow("3X Kelompok X").
+ 
+Sajikan screenshot eksekusi program (5 program + screenshot).
+Kirim via email dengan format file "3x_kelompok(x).doc"
