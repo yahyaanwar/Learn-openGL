@@ -3,7 +3,7 @@
 <br/>
 <br/>
 ## Intro
-Sumber belajar ada di direktory `modules`.
+Sumber belajar ada di direktori `modules`.
 
 Setiap kode dikelompokkan berdasarkan modul dengan nama direktori `module-<urutan>`.  
 Setiap kelompok kode mempunyai deskripsi yang disimpan di file `README.md`.  
