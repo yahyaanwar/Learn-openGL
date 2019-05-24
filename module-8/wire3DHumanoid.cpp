@@ -76,11 +76,57 @@ void display()
     cone(10, 13, 20, 20);
     glPopMatrix();
 
+    // lengan kiri
+    glPushMatrix();
+    glTranslatef(-8, -6, 0);
+    glRotatef(95, 1, 0, 0);
+    cone(2, 13, 20, 20);
+    glPopMatrix();
+
+    // lengan kanan
+    glPushMatrix();
+    glTranslatef(8, -6, 0);
+    glRotatef(95, 1, 0, 0);
+    cone(2, 13, 20, 20);
+    glPopMatrix();
+
     //celana
     glPushMatrix();
     glTranslatef(0, -20, 0);
     glRotatef(-10, 1, 0, 0);
     glScalef(1, 0.5, 1);
+    cube();
+    glPopMatrix();
+
+    //celana kanan
+    glPushMatrix();
+    glTranslatef(-4, -28, 0);
+    glRotatef(-10, 1, 0, 0);
+    glScalef(0.2, 1, 1);
+    cube();
+    glPopMatrix();
+
+    //celana kiri
+    glPushMatrix();
+    glTranslatef(4, -28, 0);
+    glRotatef(-10, 1, 0, 0);
+    glScalef(0.2, 1, 1);
+    cube();
+    glPopMatrix();
+
+    //kaki kanan
+    glPushMatrix();
+    glTranslatef(-4, -35, 0);
+    glRotatef(-10, 1, 0, 0);
+    glScalef(0.5, 0.2, 1);
+    cube();
+    glPopMatrix();
+
+    //kaki kiri
+    glPushMatrix();
+    glTranslatef(4, -35, 0);
+    glRotatef(-10, 1, 0, 0);
+    glScalef(0.5, 0.2, 1);
     cube();
     glPopMatrix();
 
