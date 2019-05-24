@@ -2,6 +2,7 @@
 #include <GL/glut.h>
 float w = 480, h = 480;
 float sx = 0, sy = -20, sz = 0;
+float posX = 10.0f, posY = 10.0f, scale = 1;
 
 void cube()
 {
@@ -34,7 +35,6 @@ void display()
     glColor3d(1, 0, 0);
     cube();
     glPopMatrix();
-
 
     glPushMatrix();
     glTranslatef(0, -3, 0);
@@ -110,7 +110,7 @@ void resize(int w1, int h1)
 
 void init()
 {
-    GLfloat LightPosition[] = {10.0f, 10.0f, 20.0f, 0.0f};
+    GLfloat LightPosition[] = {posX, posY, 0.0f, 0.0f};
     GLfloat LightAmbient[] = {5.0f, 5.0f, 0.0f, 1.0f};
     GLfloat LightDiffuse[] = {0.7f, 0.7f, 0.7f, 1.0f};
     GLfloat LightSpecular[] = {0.5f, 0.5f, 0.5f, 1.0f};
@@ -150,6 +150,13 @@ void update(int value)
     glutTimerFunc(50, update, 0);
 }
 
+void motion(int x, int y)
+{
+    posX = (x - (w/2))*2;
+    posY = (y - (h/2))*-2;
+    init();
+}
+
 int main(int argc, char **argv)
 {
     glutInit(&argc, argv);
@@ -161,6 +168,7 @@ int main(int argc, char **argv)
     glutReshapeFunc(resize);
     init();
     glutTimerFunc(50, update, 0);
+    glutMotionFunc(motion);
     glutKeyboardFunc(myKeyboard);
     glutMainLoop();
 }
