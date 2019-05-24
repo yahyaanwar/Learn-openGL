@@ -75,7 +75,6 @@ void display()
     glRotatef(95, 1, 0, 0);
     cone(10, 13, 20, 20);
     glPopMatrix();
-    glutSwapBuffers();
 
     //celana
     glPushMatrix();
@@ -84,6 +83,7 @@ void display()
     glScalef(1, 0.5, 1);
     cube();
     glPopMatrix();
+
     glutSwapBuffers();
 
 }
